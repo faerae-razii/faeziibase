@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "lbtatools",
+      "identity" : "faeziilbtatools",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/bhlvoong/LBTATools",
+      "location" : "https://github.com/faerae-razii/FaeZiiLBTATools",
       "state" : {
-        "revision" : "dce147bfbdc0417a4b430ec220c088629e9dc81d",
-        "version" : "1.0.17"
+        "revision" : "bdbde083ac86b85f24ece469d1f9e852b9322b4d",
+        "version" : "1.0.1"
       }
     },
     {

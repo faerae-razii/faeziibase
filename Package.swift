@@ -13,7 +13,7 @@ let package = Package(
             targets: ["faeziibase"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/bhlvoong/LBTATools", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/faerae-razii/FaeZiiLBTATools", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/SnapKit/SnapKit", .upToNextMajor(from: "5.0.0")),
     ],
     targets: [
@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "faeziibase",
             dependencies: [
-                "LBTATools",
+                "FaeZiiLBTATools",
                 "SnapKit"
             ]
         ),
