@@ -12,7 +12,7 @@ import LBTATools
 
 private typealias `Self` = FaeZiiBaseViewController
 
-class FaeZiiBaseViewController: UIViewController {
+open class FaeZiiBaseViewController: UIViewController {
     // MARK: - Open Variables
 
     open var shouldAttachScrollView: Bool { return true }
@@ -40,7 +40,7 @@ class FaeZiiBaseViewController: UIViewController {
 
     // MARK: - Life Cycles
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         if shouldAttachScrollView {
@@ -51,7 +51,7 @@ class FaeZiiBaseViewController: UIViewController {
         setupActions()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         updateViews()
