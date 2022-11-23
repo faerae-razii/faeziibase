@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  FaeZiiBaseViewController.swift
 //  
 //
 //  Created by Faerae on 23/11/22.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+open class FaeZiiBaseViewController: UIViewController {
     // MARK: - Properties
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         print("hello")
     }
