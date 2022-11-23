@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "faeziibase",
             dependencies: [
-                "FaeZiiLBTATools",
+                .product(name: "LBTATools", package: "FaeZiiLBTATools"),
                 "SnapKit"
             ]
         ),
