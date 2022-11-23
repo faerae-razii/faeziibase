@@ -7,11 +7,61 @@
 
 import UIKit
 
-open class FaeZiiBaseViewController: UIViewController {
+import UIKit
+import LBTATools
+
+private typealias `Self` = FaeZiiBaseViewController
+
+class FaeZiiBaseViewController: UIViewController {
+    // MARK: - Open Variables
+
+    open var shouldAttachScrollView: Bool { return true }
+
+    // MARK: Open Functions
+
+    @objc dynamic open func initializeUI() {}
+    @objc dynamic open func updateViews() {}
+    @objc dynamic open func setupViews() {}
+    @objc dynamic open func setupActions() {}
+    @objc dynamic open func fetchData() {}
+    @objc dynamic open func updateButtonState() {}
+
     // MARK: - Properties
 
-    open override func viewDidLoad() {
+    lazy var scrollView: BaseScrollView = {
+        let scrollView = BaseScrollView()
+
+        return scrollView
+    }()
+
+    var contentView: UIView {
+        return scrollView.contentView
+    }
+
+    // MARK: - Life Cycles
+
+    override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+        view.backgroundColor = .black
+        if shouldAttachScrollView {
+            attachScrollView()
+        }
+        initializeUI()
+        setupViews()
+        setupActions()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        updateViews()
+    }
+}
+
+// MARK: - Helpers
+extension Self {
+    private func attachScrollView() {
+        view.addSubview(scrollView)
+        scrollView.fillSuperviewSafeAreaLayoutGuide()
     }
 }
