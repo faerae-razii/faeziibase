@@ -34,7 +34,7 @@ open class FaeZiiBaseViewController: UIViewController {
         return scrollView
     }()
 
-    var contentView: UIView {
+    public var contentView: UIView {
         return scrollView.contentView
     }
 
